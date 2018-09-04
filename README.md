@@ -97,35 +97,35 @@ new BrowserSyncPlugin({
 
 ```bash
 .
-├── composer.json                # Compose dependencies (plugins)
-├── composer.lock                # Composer lock file
-├── docker-compose.yml           # Docker Compose configuration
-├── package.json                 # Node.js dependencies
-├── wp-content
-│   └── themes
-│       └── theme
-│           ├── footer.php
-│           ├── functions.php
-│           ├── header.php
-│           ├── index.php
-│           └── page.php
-├──scripts                       # Build / Dev Scripts
-│   ├── build.js                 # Build task
-│   ├── start.js                 # Start task
-│   └── webpack.config.js        # Webpack configuration   
-└──src
-    ├── index.js                 # JavaScript entry point
-    ├── routes                   # Routes
-    │   ├── common.js            # JS that will run on EVERY page
-    │   └── <xxx>.js             # JS that will run on pages with <xxx> slug 
-    ├── style.scss               # SCSS style entry point
-    ├── styles                   # SCSS
-    │   ├── _global-vars.scss
-    │   ├── _base.scss
-    │   └── ...
-    └── util
-        ├── Router.js            # HTML5 Router, DO NOT TOUCH
-        └── camelCase.js         # Helper function for Router, DO NOT TOUCH
+├── composer.json                 # Compose dependencies (plugins)
+├── composer.lock                 # Composer lock file
+├── docker-compose.yml            # Docker Compose configuration
+└── wp-content
+    └── themes
+        └── theme
+            ├── scripts           # Build / Dev Scripts
+            │   ├── build.js      # Build task
+            │   ├── start.js      # Start task
+            │   └── webpack.config.js # Webpack configuration   
+            ├── src
+            │   ├── index.js        # JavaScript entry point
+            │   ├── routes          # Routes
+            │   │   ├── common.js   # JS that will run on EVERY page
+            │   │   └── <xxx>.js    # JS that will run on pages with <xxx> slug 
+            │   ├── style.scss      # SCSS style entry point
+            │   ├── styles          # SCSS
+            │   │   ├── _global-vars.scss
+            │   │   ├── _base.scss
+            │   │   └── ...
+            │   └── util
+            │       ├── Router.js    # HTML5 Router, DO NOT TOUCH
+            │       └── camelCase.js # Helper function for Router, DO NOT TOUCH
+            ├── footer.php
+            ├── functions.php
+            ├── header.php
+            ├── index.php
+            ├── package.json         # Node.js dependencies
+            └── page.php
 ```
 
 #### Author
