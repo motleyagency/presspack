@@ -41,7 +41,7 @@ In composer.json there are few plugins predifined, you might wanna change/remove
 There's few example files in theme folder which you might wanna keep or overwrite everything for example with html5blank theme.
 
 ## Developing Locally
-To work on the theme locally, open another window/tab in terminal and run:
+To work on the theme locally, open another window/tab in terminal, go to your theme folder and run:
 
 ```bash
 yarn start

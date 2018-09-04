@@ -119,7 +119,7 @@ module.exports = {
         port: 4000,
         logLevel: 'silent',
         files: ['./*.php'],
-        proxy: 'http://localhost:9009/',
+        proxy: 'http://localhost:8080/',
       }),
   ].filter(Boolean),
 };
