@@ -1,6 +1,6 @@
 # Presspack
 
-> Make Wordpress theme development great again.
+> Forked from jaredpalmer/presspack to better suit my needs
 
 ## Features
 
@@ -22,11 +22,20 @@
 
 ## Getting Started
 ```bash
-git clone git@github.com:jaredpalmer/presspack.git
+git clone git@github.com:turansadri/presspack.git
 yarn install
 composer install # if you want plugins ( not required )
 docker-compose up 
 ```
+
+## Wordpress
+Get the latest WP from wordpress.org and copy the contents to project root.
+
+## Plugins
+In composer.json there are few plugins predifined, you might wanna change/remove them. Lean WP strips Wordpress from all the extra stuff, but there's no settings to select which parts you want to remove. For some projects this can be too much.
+
+## Theme
+There's few example files in theme folder which you might wanna keep or overwrite everything for example with html5blank theme.
 
 ## Developing Locally
 To work on the theme locally, open another window/tab in terminal and run:
@@ -61,7 +70,7 @@ modify `ports`.
 # docker-compose.yml
  ...
   ports:
-    - "9009:80" # only need to change `9009:80` --> localhost:9009
+    - "8080:80" # only need to change `9009:80` --> localhost:9009
  ...
 ```
 
@@ -79,7 +88,7 @@ new BrowserSyncPlugin({
   port: 4000, // this is the port you develop on. Can be anything.
   logLevel: 'silent',
   files: ['./*.php'],
-  proxy: 'http://localhost:9009/', // This port must match docker-compose.yml
+  proxy: 'http://localhost:8080/', // This port must match docker-compose.yml
 }),
 ...
 ```
@@ -91,12 +100,15 @@ new BrowserSyncPlugin({
 ├── composer.json                # Compose dependencies (plugins)
 ├── composer.lock                # Composer lock file
 ├── docker-compose.yml           # Docker Compose configuration
-├── footer.php
-├── functions.php
-├── header.php
-├── index.php
 ├── package.json                 # Node.js dependencies
-├── page.php  
+├── wp-content
+│   └── themes
+│       └── theme
+│           ├── footer.php
+│           ├── functions.php
+│           ├── header.php
+│           ├── index.php
+│           └── page.php
 ├──scripts                       # Build / Dev Scripts
 │   ├── build.js                 # Build task
 │   ├── start.js                 # Start task
