@@ -23,7 +23,10 @@
 ## Getting Started
 ```bash
 git clone git@github.com:turansadri/presspack.git
+cd wp-content/themes/theme
 yarn install
+
+back to project root:
 composer install # if you want plugins ( not required )
 docker-compose up 
 ```
@@ -128,5 +131,5 @@ new BrowserSyncPlugin({
             └── page.php
 ```
 
-#### Author
+#### Original author
 - Jared Palmer [@jaredpalmer](https://twitter.com/jaredpalmer)
