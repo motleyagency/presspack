@@ -22,7 +22,7 @@
 
 ## Getting Started
 ```bash
-git clone git@github.com:turansadri/presspack.git
+clone the repository
 cd wp-content/themes/theme
 yarn install
 
